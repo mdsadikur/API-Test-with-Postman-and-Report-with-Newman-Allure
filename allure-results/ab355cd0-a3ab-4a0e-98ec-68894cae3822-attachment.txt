@@ -1,0 +1,6 @@
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+var registertoken=pm.response.json();
+pm.globals.set("bearerToken", registertoken.token);
